@@ -26,10 +26,7 @@ import com.techprimers.security.securitydbexample.repository.MySQLConnect;
 @Controller
 public class HelloResource {
 
-    @GetMapping("/all")
-    public String hello() {
-        return "Hello Youtube";
-    }
+   
 
     @PreAuthorize("hasAnyRole('ADMIN')")
     @GetMapping("/secured/all")
